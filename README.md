@@ -1,9 +1,9 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local HENG = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 
-local MainWindow = Rayfield:CreateWindow({
-	Name = "2BK2 TEST",
-	LoadingTitle = "Loading...",
+local MainWindow = HENG:CreateWindow({
+	Name = "2BK2_RUN",
+	LoadingTitle = "welcome TO 2BK2",
 	LoadingSubtitle = "BK",
 	ConfigurationSaving = {
 	   Enabled = true,
@@ -28,12 +28,12 @@ local MainWindow = Rayfield:CreateWindow({
  })
 
 
- local MainTab = MainWindow:CreateTab("Main", "home") -- Title, Image
+ local MainTab = MainWindow:CreateTab("MainRUN", "home") -- Title, Image
 
 
 
  local Toggle = MainTab:CreateToggle({
-	Name = "Infinite Jump",
+	Name = "SUPER JUMP",
 	CurrentValue = false,
 	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 	Callback = function(InfiniteJumpEnabled)
@@ -47,16 +47,38 @@ local MainWindow = Rayfield:CreateWindow({
  })
 
 
-
  local Slider = MainTab:CreateSlider({
-	Name = "JumpPower",
+	Name = "SUPER JUMP",
 	Range = {50, 500},
-	Increment = 10,
+	Increment = 1,
 	Suffix = "JumpPower",
-	CurrentValue = 10,
-	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	CurrentValue = 1,
+	Flag = "Slider8", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 	Callback = function(v)
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 	end,
  })
  
+ local Slider = MainTab:CreateSlider({
+    Name = "RUN SPEED",
+    Range = {1, 100},
+    Increment = 1,
+    Suffix = "Speed",
+    CurrentValue = 1,
+    Flag = "Slider9", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+     game.Players.LocalPlayer.Character:SetAttribute("SpeedMultiplier", Value)
+    end,
+ })
+
+ local Slider = MainTab:CreateSlider({
+    Name = "SUPER DASH ",
+    Range = {50, 500},
+    Increment = 1,
+    Suffix = "PowerDash",
+    CurrentValue = 1,
+    Flag = "Slider5", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+     game.Players.LocalPlayer.Character:SetAttribute("DashLength", Value)
+    end,
+ })
