@@ -27,11 +27,11 @@ local MainWindow = HENG:CreateWindow({
  local MainTab = MainWindow:CreateTab("MainRUN", "home") -- Title, Image
 
  local Toggle = MainTab:CreateToggle({
-    Name = "PRESETS:AimLock",
+    Name = "AimLock Near",
     CurrentValue = false,
     Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Aepione/Prensado/refs/heads/main/Prensado%20camlock"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Mengkimheng/2BK2./refs/heads/main/sef"))()
     -- The function that takes place when the toggle is pressed
     -- The variable (Value) is a boolean on whether the toggle is true or false
     end,
