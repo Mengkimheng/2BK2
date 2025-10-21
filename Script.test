@@ -1,0 +1,3 @@
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Key = "TROMGNGUYEN-F765-A456"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mengkimheng/2BK2.Test/refs/heads/main/free"))()
